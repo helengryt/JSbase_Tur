@@ -5,7 +5,6 @@
 var a = +prompt('Введите число a');
 var b = +prompt('Введите число b');
 var sum = 0;
-var odd;
 var i;
 
 if(a >= b) {
@@ -19,9 +18,7 @@ if(a >= b) {
 
 for (i = a; i <= b; i++){
 	if (i % 2 != 0) {
-		odd = i;
-	} else {
-		continue;
-	}
-	document.write(odd+'<br/>');
+	document.write(i+'<br/>');
+} 
+	
 }
