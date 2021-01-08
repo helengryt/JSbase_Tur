@@ -14,31 +14,14 @@
 
 var cars = ["Mitsubishi", "Honda", "Toyota", "Suzuki", "Audi", "BMW", "Mercedes"];
 var element = prompt("Введите марку авто");
+var element2 = prompt("Введите марку авто 2");
 
-var i;
-var index = cars.indexOf(element);
+var index = cars.indexOf(element);// vyvodit nomer v massive
 	console.log(index);
 
-
-/*if (cars[i] != element) {
-	var newCars = cars.push(element);
-	//console.log(cars);
+if (index == -1){
+	newCars = cars.push(element2);
+} else {
+	var newCars = cars.splice(index,0,element);
 }
-
-else {
-	var index = cars.indexOf(element);
-	console.log(index);
-}*/
-
-
-
-/*{
-	for (i = 0; i < element; i++){
-		newCars = cars.push(element); 
-		console.log(cars);
-	}
-
-	//var newCars = cars.splice(cars[i], 0, cars[i]);
-}*/
-
-//console.log(cars);
+console.log(cars);
