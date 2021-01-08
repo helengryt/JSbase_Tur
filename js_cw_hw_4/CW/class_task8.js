@@ -23,35 +23,34 @@ function getRandom(a, b) {
   return Math.floor(Math.random() * (b - a + 1)) + a;
 }
 
-function generateArray(n, a, b){
-	if (a > b || a == b){
-		return "False";
-	} else {
-		for (var i = 0; i < n; i++) {
-			arr.push(getRandom(a, b));
-		}
-	}
-	return arr;
-}
-console.log("Массив: [" + generateArray(8, 1, 10) + "] сгенерированный от " +a+ " до " +b);
+function generateArray(n, a, b) {
+    if (a > b || a == b) {
+        return "False";
+    }
 
-var sum = 0;
-var arr = function generateArray(n, a, b){
-	if (a > b || a == b){
-		return "False";
-	} else {
-		for (var i = 0; i < n; i++) {
-			arr.push(getRandom(a, b));
-		}
-	}
-	return arr;
+    var arr = [];
+    for (var i = 0; i < n; i++) {
+        arr.push(getRandom(a, b));
+    }
+
+    return arr;
 }
 
-function calcArray(c, d){
-	for(var j = c; j < d; j++){
-		sum = sum + arr[j];
-	}
-	return sum;
+function calcArray(c, d, arr) {
+    var sum = 0;
+    for (var j = c; j < d; j++) {
+        sum = sum + arr[j];
+    }
+
+    return sum;
 }
 
-console.log(calcArray(2, 5));
+var n = 8;
+var a = 1;
+var b = 10
+
+var generatedArray = generateArray(n, a, b);
+console.log("Массив: [" + generatedArray + "] сгенерированный от " + a + " до " + b);
+
+var calculatedSum = calcArray(2, 5, generatedArray);
+console.log(calculatedSum);
