@@ -31,14 +31,14 @@ var a = [
 console.log(a.length);
 
 var sum = 0;
-
 for (var i = 0; i < a.length; i++){
 	for (var j = 0; j < a[i].length; j++){
 		sum=sum+a[i][j];
+		
 	}
-	
+	console.log(sum);
 }
-console.log(sum)
+
 
 
 
