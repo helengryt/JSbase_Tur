@@ -3,33 +3,29 @@
        В зависимости от принятого знака операции, вызвать соответствующий метод.*/
 
 
-var x = +prompt("Enter 1st number");
-var y = +prompt("Enter 2nd number");
-var z = prompt("Enter sign");
-
 var calculator = {
-	x: x,
-	y: y,
-	z: z,
+	x: +prompt("Enter 1st number"),
+	y: +prompt("Enter 2nd number"),
+	z: prompt("Enter sign"),
 
 	plus: function (){
-		return x+y;
+		return this.x+this.y;
 	},
 
 	minus: function (){
-		return x-y;
+		return this.x-this.y;
 	},
 
 	multiply: function (){
-		return x*y;
+		return this.x*this.y;
 	},
 
 	divide: function (){
-		return x/y;
+		return this.x/this.y;
 	},
 
-	calc: function(z){
-		switch (z) {
+	calc: function(){
+		switch (this.z) {
 			case "+": console.log(calculator.plus()); break;
 			case "-": console.log(calculator.minus()); break;
 			case "*": console.log(calculator.multiply()); break;
@@ -39,4 +35,4 @@ var calculator = {
 	}
 }
 
-calculator.calc(z);
+calculator.calc();
