@@ -66,49 +66,49 @@ function sortEmp(allEmployees) {
 		var salary = allEmployees[i].salary;
 	};
 
-			function sortByName(){
-				allEmployees.sort(function( a, b ){
-				var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
-					if (nameA < nameB)
-					  return -1
-					if (nameA > nameB)
-					  return 1
-					return 0
-			})
-			};
+	function sortByName(){
+	allEmployees.sort(function( a, b ){
+	var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
+		if (nameA < nameB)
+		  return -1
+		if (nameA > nameB)
+		  return 1
+		return 0
+	})
+	};
 
-			function sortBysName(){
-				allEmployees.sort(function( a, b ){
-				var nameA=a.sName.toLowerCase(), nameB=b.sName.toLowerCase()
-					if (nameA < nameB)
-					  return -1
-					if (nameA > nameB)
-					  return 1
-					return 0
-			})
-			};
+	function sortBysName(){
+	allEmployees.sort(function( a, b ){
+	var nameA=a.sName.toLowerCase(), nameB=b.sName.toLowerCase()
+		if (nameA < nameB)
+		  return -1
+		if (nameA > nameB)
+		  return 1
+		return 0
+	})
+	};
 
-			function sortByAge(){
-				allEmployees.sort(function( a, b ) {return a.age - b.age});
-			};
+	function sortByAge(){
+	allEmployees.sort(function( a, b ) {return a.age - b.age});
+	};
 
-			function sortBySalary(){
-				allEmployees.sort(function( a, b ) {return a.salary - b.salary});
-			};
+	function sortBySalary(){
+	allEmployees.sort(function( a, b ) {return a.salary - b.salary});
+	};
 
-			function sortByOccupation(){
-				allEmployees.sort(function( a, b ){
-				var nameA=a.occupation.toLowerCase(), nameB=b.occupation.toLowerCase()
-					if (nameA < nameB)
-					  return -1
-					if (nameA > nameB)
-					  return 1
-					return 0
-			})
-			};
+	function sortByOccupation(){
+	allEmployees.sort(function( a, b ){
+	var nameA=a.occupation.toLowerCase(), nameB=b.occupation.toLowerCase()
+		if (nameA < nameB)
+		  return -1
+		if (nameA > nameB)
+		  return 1
+		return 0
+	})
+	};
 
 
-		var param = prompt("Enter sorting parameter");
+	var param = prompt("Enter sorting parameter");
 		if (param == "Name"){
 			sortByName();
 		} else if (param == "Last name") {
