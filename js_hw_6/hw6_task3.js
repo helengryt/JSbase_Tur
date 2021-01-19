@@ -23,11 +23,9 @@
         function countOnline(obj) {
         	var count = 0;
         	for (var name in users) {
-        		for (var prop in users[name]) {
-    				if (users[name][prop] == true) {
+        		if (users[name].online === true) {
         			count++;
         			}
-        		}
-        	} console.log(count);
+        		} console.log(count);
         }
         countOnline(users);

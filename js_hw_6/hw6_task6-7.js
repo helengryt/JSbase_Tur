@@ -117,13 +117,13 @@
 
 var ranking = watchList.map(function(movie){
     return {
-    "Title": movie.Title,
-    "imdbRating" : movie.imdbRating 
+    "Title": [movie.Title],
+    "imdbRating" : [movie.imdbRating] 
   }
 });
 console.log(ranking);
 
-
-var filteredList = ranking.filter(movie => +movie.imdbRating >= 8.0);
+var filteredList = [];
+filteredList = ranking.filter(movie => +movie.imdbRating >= 8.0);
 console.log(filteredList);
 
