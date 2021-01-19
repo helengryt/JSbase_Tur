@@ -1,103 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lesson 6 Practise</title>
-</head>
-<body>
-    <!-- <script src="hw6_task1.js"></script> -->
-    <!-- <script src="hw6_task2.js"></script>   -->
-    <!-- <script src="hw6_task3.js"></script> -->
-    <!-- <script src="hw6_task4.js"></script> -->
-    <!-- <script src="hw6_task5.js"></script> -->
-    <!-- <script src="hw6_task6-7.js"></script>  -->
-    <script src="hw6_task8.js"></script>
-    <!-- 
-        1.  Объект user содержит три свойства. Свойство data содержит пять свойств, один из которых содержит массив friends. Завершите запись функции addFriend, которая принимает объект user и имя друга(friend), и добавляет имя друга(friend) в массив friends. Функция должна возвращать массив friends.
-
-            let user = {
-                name: 'Kenneth',
-                age: 28,
-                data: {
-                    username: 'kennethCodesAllDay',
-                    joinDate: 'March 26, 2016',
-                    organization: 'freeCodeCamp',
-                    friends: [
-                        'Sam',
-                        'Kira',
-                        'Tomo'
-                    ],
-                    location: {
-                    city: 'San Francisco',
-                    state: 'CA',
-                    country: 'USA'
-                    }
-                }
-            };
-
-            function addFriend(userObj, friend) {
-                // your code here
-            }
-            console.log(addFriend(user, 'Pete'));
-
-        2. Завершите написание функции getArrayOfUsers, чтобы она возвращала массив, содержащий все свойства объекта, который он получает в качестве аргумента.
-
-        let users = {
-            Alan: {
-                age: 27,
-                online: false
-            },
-            Jeff: {
-                age: 32,
-                online: true
-            },
-            Sarah: {
-                age: 48,
-                online: false
-            },
-            Ryan: {
-                age: 19,
-                online: true
-            }
-        };
-
-        function getArrayOfUsers(obj) {}
-        console.log(getArrayOfUsers(users));
-
-        3. Допишите функцию countOnline; используйте оператор for ... in в этой функции для циклического обхода пользователей в объекте users и возврата количества пользователей, для которых для свойства онлайн установлено значение true.
-
-        let users = {
-            Alan: {
-                age: 27,
-                online: false
-            },
-            Jeff: {
-                age: 32,
-                online: true
-            },
-            Sarah: {
-                age: 48,
-                online: false
-            },
-            Ryan: {
-                age: 19,
-                online: true
-            }
-        };
-
-        function countOnline(obj) {}
-        console.log(countOnline(users));
-
-        4. Используйте метод some внутри функции checkPositive, чтобы проверить, является ли какой-либо элемент в arr положительным. Функция должна возвращать логическое значение.
-
-        function checkPositive(arr) {}
-        checkPositive([1, 2, 3, -4, 5]);
-
-        ##########################################################
-
-        // the global variable
         var watchList = [
                 {  
                     "Title": "Inception",
@@ -211,13 +111,16 @@
             }
         ];
 
-        6.(Task 5) Массив watchList содержит объекты с информацией о нескольких фильмах. Используйте map, чтобы извлечь заголовок и рейтинг из списка наблюдения и сохранить новый массив в переменной рейтинга.
+/*8. Массив watchList содержит объекты с информацией о нескольких фильмах. Используйте reduce, чтобы найти средний 
+рейтинг IMDB фильмов, снятых режиссером Кристофером Ноланом. Вспомните из предыдущих заданий filter и map. Вам может 
+потребоваться создать другие переменные, но сохраните окончательное среднее значение в переменную AverageRating. 
+Обратите внимание, что значения рейтинга сохраняются в виде строк в объекте и должны быть преобразованы в числа, 
+прежде чем они будут использованы в любых математических операциях.*/
 
-        7. Массив watchList содержит объекты с информацией о нескольких фильмах. Используйте filter и map для возврата нового массива объектов только с title и rating, но где imdbRating больше или равен 8.0.
-            var filteredList;
-            console.log(filteredList); 
+var nolanList = watchList.filter(movie => movie.Director === "Christopher Nolan");
+console.log(nolanList);
 
-        8. Массив watchList содержит объекты с информацией о нескольких фильмах. Используйте reduce, чтобы найти средний рейтинг IMDB фильмов, снятых режиссером Кристофером Ноланом. Вспомните из предыдущих заданий filter и map. Вам может потребоваться создать другие переменные, но сохраните окончательное среднее значение в переменную AverageRating. Обратите внимание, что значения рейтинга сохраняются в виде строк в объекте и должны быть преобразованы в числа, прежде чем они будут использованы в любых математических операциях.
-     -->
-</body>
-</html>
+//var sum = 0;
+var AverageRating = nolanList.reduce(function(sum, movie){return(sum + Number(movie.imdbRating));}, 0);
+AverageRating = AverageRating / nolanList.length;
+console.log(AverageRating);

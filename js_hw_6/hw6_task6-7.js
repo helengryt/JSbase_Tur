@@ -116,9 +116,13 @@
 массива объектов только с title и rating, но где imdbRating больше или равен 8.0.*/
 
 var ranking = watchList.map(function(movie){
-    return "Movie title: " + movie.Title + ", Ranking: " + movie.imdbRating
+    return {
+    "Title": movie.Title,
+    "imdbRating" : movie.imdbRating 
+  }
 });
 console.log(ranking);
+
 
 var filteredList = ranking.filter(movie => +movie.imdbRating >= 8.0);
 console.log(filteredList);
